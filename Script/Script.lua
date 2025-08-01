@@ -1,3 +1,7 @@
+TUM.LogLevel = "info"
+TUM.Id = "TUM"
+veaf.loggers.new(TUM.Id, TUM.LogLevel)
+
 env.setErrorMessageBoxEnabled(true) -- Enable messageboxes for Lua errors
 
 DCSEx = {}
