@@ -55,7 +55,7 @@ TUM.administrativeSettingsDefaultValues = {
     -- This table defines the default values for the administrative settings.
     -- The keys must match the keys in TUM.administrativeSettings
     [TUM.administrativeSettings.USE_SPECIFIC_RADIOMENU] = false,    -- Use a specific radio menu for the mission commands, or use the main one?
-    [TUM.administrativeSettings.INITIALIZE_AUTOMATICALLY] = true,   -- Automatically initialize the mission when the script is loaded. If false, you must call TUM.initialize() manually.
+    [TUM.administrativeSettings.INITIALIZE_AUTOMATICALLY] = --[[ VEAF SPECIFIC ]] false,  -- Automatically initialize the mission when the script is loaded. If false, you must call TUM.initialize() manually.
     [TUM.administrativeSettings.IGNORE_ZONES_STARTINGWITH] = nil,   -- If set, ignore all zones starting with this string. This is useful to avoid conflicts with other scripts that use the same zone names.
     [TUM.administrativeSettings.ONLY_ZONES_STARTINGWITH] = nil,     -- If set, only adds zones starting with this string. This is useful to avoid conflicts with other scripts that use the same zone names.
 }
