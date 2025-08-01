@@ -191,10 +191,11 @@ function TUM.initialize()
                     return nil
                 end
 
-                if #DCSEx.envMission.getPlayerGroups(coalition.side.BLUE) > 0 and #DCSEx.envMission.getPlayerGroups(coalition.side.RED) > 0 then
-                    TUM.log("Both coalitions have player slots. The Universal Mission is a purely singleplayer/PvE experience and does not support PvP. Please make sure only one coalition has player slots in the mission editor.", TUM.logLevel.ERROR)
-                    return nil
-                end
+                --[[ VEAF SPECIFIC ]]
+                --if #DCSEx.envMission.getPlayerGroups(coalition.side.BLUE) > 0 and #DCSEx.envMission.getPlayerGroups(coalition.side.RED) > 0 then
+                --    TUM.log("Both coalitions have player slots. The Universal Mission is a purely singleplayer/PvE experience and does not support PvP. Please make sure only one coalition has player slots in the mission editor.", TUM.logLevel.ERROR)
+                --    return nil
+                --end
             end
 
             if not TUM.territories.onStartUp() then return nil end
