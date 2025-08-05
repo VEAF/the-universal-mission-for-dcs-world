@@ -12,10 +12,12 @@
 TUM.administrativeSettings = {
     -- This table defines the administrative settings for the script.
     -- These settings can modify the behavior of the script, and can be set by the mission maker via a specific trigger zone's parameters, or via script (defining the TUM.administrativeSettingsValues below)
-    USE_SPECIFIC_RADIOMENU = 1,     -- Use a specific radio menu for the mission commands, or use the main one?
-    INITIALIZE_AUTOMATICALLY = 2,   -- Automatically initialize the mission when the script is loaded. If false, you must call TUM.initialize() manually.
-    IGNORE_ZONES_STARTINGWITH = 3,  -- If set, ignore all zones starting with this string. This is useful to avoid conflicts with other scripts that use the same zone names.
-    ONLY_ZONES_STARTINGWITH = 4,    -- If set, only adds zones starting with this string. This is useful to avoid conflicts with other scripts that use the same zone names.
+    USE_SPECIFIC_RADIOMENU = 1,      -- Use a specific radio menu for the mission commands, or use the main one?
+    INITIALIZE_AUTOMATICALLY = 2,    -- Automatically initialize the mission when the script is loaded. If false, you must call TUM.initialize() manually.
+    IGNORE_ZONES_STARTINGWITH = 3,   -- If set, ignore all zones starting with this string. This is useful to avoid conflicts with other scripts that use the same zone names.
+    ONLY_ZONES_STARTINGWITH = 4,     -- If set, only adds zones starting with this string. This is useful to avoid conflicts with other scripts that use the same zone names.
+    ADD_MENU_TO_GROUPS = 5,          -- If set (to a number or a list of numbers) only the group(s) with this ID will have the menu (or menus if USE_SPECIFIC_RADIOMENU is false) added to their F10 radio menu
+    ADD_MENU_TO_GROUPS_CALLBACK = 6, -- If set (to a function), this function will be called (with the group as the parameter) and the menu (or menus if USE_SPECIFIC_RADIOMENU is false) will be added only if the function returns true
 }
 
 TUM.administrativeSettingsDefaultValues = {
@@ -25,6 +27,8 @@ TUM.administrativeSettingsDefaultValues = {
     [TUM.administrativeSettings.INITIALIZE_AUTOMATICALLY] = true,   -- Automatically initialize the mission when the script is loaded. If false, you must call TUM.initialize() manually.
     [TUM.administrativeSettings.IGNORE_ZONES_STARTINGWITH] = nil,   -- If set, ignore all zones starting with this string. This is useful to avoid conflicts with other scripts that use the same zone names.
     [TUM.administrativeSettings.ONLY_ZONES_STARTINGWITH] = nil,     -- If set, only adds zones starting with this string. This is useful to avoid conflicts with other scripts that use the same zone names.
+    [TUM.administrativeSettings.ADD_MENU_TO_GROUPS] = nil,          -- If set (to a number or a list of numbers) only the group(s) with this ID will have the menu (or menus if USE_SPECIFIC_RADIOMENU is false) added to their F10 radio menu
+    [TUM.administrativeSettings.ADD_MENU_TO_GROUPS_CALLBACK] = nil, -- If set (to a function), this function will be called (with the group as the parameter) and the menu (or menus if USE_SPECIFIC_RADIOMENU is false) will be added only if the function returns true
 }
 
 TUM.administrativeSettingsValues = {
